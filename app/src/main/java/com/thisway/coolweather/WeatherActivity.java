@@ -23,6 +23,7 @@ import com.bumptech.glide.Glide;
 import com.thisway.coolweather.gson.Forecast;
 import com.thisway.coolweather.gson.Weather;
 
+import com.thisway.coolweather.service.AutoUpdateService;
 import com.thisway.coolweather.util.HttpUtil;
 import com.thisway.coolweather.util.Utility;
 
@@ -235,8 +236,8 @@ public class WeatherActivity extends AppCompatActivity {
         carWashText.setText(carWash);
         sportText.setText(sport);
         weatherLayout.setVisibility(View.VISIBLE);
-       // Intent intent = new Intent(this, AutoUpdateService.class);
-        //startService(intent);
+        Intent intent = new Intent(this, AutoUpdateService.class);
+        startService(intent);
     }
 
 }
